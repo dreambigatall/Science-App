@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="func.css">
+   
+    <script type="module" src="func.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img class="img_slogan" src="https://itstuff.com.ua/wp-content/uploads/2019/01/DSC_0298-e1547735493143.jpg">
+        <div class="slogan">We do Programing and Science</div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#abot">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <form id="exp">
+        <fieldset>
+            <legend>Expirement</legend>
+            <div>
+             <div class="field">
+                <label for="exp_id_field">ID:</label>
+                <input  type="text" id="exp_id_field">
+                <input  class="button" type="submit" id="exp_find_button" value="Find">
+             </div>
+             <div class="field">
+                <label for="exp_task_field">Task:</label>
+                <input type="text" id="exp_task_field" disabled>
+             </div>
+             <div class="field">
+                <label for="exp_budget_field">Budget:</label>
+                <input type="text" id="exp_budget_field" disabled>
+             </div>
+            </div>
+            <fieldset>
+                <legend>Schedule</legend>
+                <div class="field">
+                    <label for="exp_startTime_field">Start Time:</label>
+                    <input type="datetime-local" id="exp_startTime_field" disabled>
+                </div>
+                <div class="field">
+                    <label for="exp_endTime_field">End Time:</label>
+                    <input type="datetime-local" id="exp_endTime_field" disabled>
+                </div>
+                <div class="field">
+                    <label for="exp_endTime_field">Complete</label>
+                    <input type="checkbox" id="exp_complete_field" disabled>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Summery</legend>
+                <!-- <progress id="exp_average_field" min="0" max="100" value="0">0</progress> -->
+                <div id="exp_average_box">
+                    <div id="exp_average_value"></div>
+                </div>
+            </fieldset>
+        </fieldset>
+    </form>
+    <fieldset>
+        <legend>Mesurements</legend>
+        <table>
+            <thead>
+                <tr><th>ID</th><th>Units</th><th>Values</th><th>Time</th></tr>
+
+            </thead>
+            <tbody id="mea_table"></tbody>
+        </table>
+        <input  class="button"  type="button" value="Add Mesurement" id="mea_add_button" disabled>
+    </fieldset>
+</main>
+<footer>copy halid</footer>
+<dialog id="mea_add_dialog">
+    <form id="mea">
+        <fieldset>
+            <legend>Add Mesurement</legend>
+            <select id="mea_unit_input">
+                <option value="s">Second</option>
+                <option value="m">Meter</option>
+                <option value="kg">Kilo Gram</option>
+                <option value="A">Amper</option>
+                <option value="k">Kelvin</option>
+                <option value="mol">Mole</option>
+                <option value="cd">candela</option>
+            </select>
+            <input id="mea_value_input" type="text">
+            <input class="button" id="mea_ok_button" type="submit" value="Ok">
+            <input class="button" id="mea_reset_button" type="reset" value="Cancel">
+        </fieldset>
+    </form>
+</dialog>
+ </body>
+</html>
